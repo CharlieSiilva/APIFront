@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="nuevoForm" (ngSubmit)="postForm(nuevoForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Proveedor</label><br>
+            <input type="text" class="formControl" placeholder="Nombre del Proveedor" formControlName="proveedor"><br>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Monto</label><br>
+            <input type="number" class="formControl" placeholder="Monto total" formControlName="monto"><br>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Moneda</label><br>
+            <input type="text" class="formControl" placeholder="Tipo de moneda" formControlName="moneda"><br>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Comentario</label><br>
+            <input type="text" class="formControl" placeholder="Deja un comentario" formControlName="comentario"><br>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Volver al listado</button>
+    </form>
+</div>
+
+<app-footer></app-footer>

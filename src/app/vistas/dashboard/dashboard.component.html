@@ -1,0 +1,33 @@
+<app-header>
+
+</app-header>
+<div class="container">
+    <h3>Lista de Recibos</h3><br>
+    <button type="button" class="btn btn-primary" (click)="nuevoPaciente()">Registrar nuevo</button>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Proveedor</th>
+        <th scope="col">Monto</th>
+        <th scope="col">Moneda</th>
+        <th scope="col">Comentario</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recibo of recibos" (click)="editarRecibo(recibo.idRecibo)">
+        <th scope="row">{{ recibo.idRecibo }}</th>
+        <td>{{ recibo.proveedor }}</td>
+        <td>{{ recibo.monto }}</td>
+        <td>{{ recibo.moneda }}</td>
+        <td>{{ recibo.comentario }}</td>
+        <td>{{ recibo.fechaComentario }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer>
+
+</app-footer>
